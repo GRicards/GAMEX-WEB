@@ -4,31 +4,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>GAMEX - Login</title>
+  <title>GAMEX - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div class="logo-container">
-    <img src="./logo.svg" alt="GAMEX" class="logo">
-    <p class="tagline">Discover Unbeatable Discounts on Your Favorite Video Games!</p>
-  </div>
-  
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <div class="input-group">
-        <input type="email" id="email" placeholder="Email" required>
-        <img src="./email-icon.svg" class="input-icon">
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="./logo.svg" alt="GAMEX" class="nav-logo">
+      <span class="nav-tagline">Discover Unbeatable Discounts on Your Favorite Video Games!</span>
+    </div>
+    <div class="nav-center">
+      <a href="#" class="nav-link">Upcoming</a>
+      <a href="#" class="nav-link">Store</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="nav-right">
+      <button class="search-btn">
+        <img src="search-icon.svg" alt="Search">
+      </button>
+      <button class="review-btn">Review</button>
+      <button class="profile-btn">
+        <img src="profile-icon.svg" alt="Profile">
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="trending-section">
+      <h2>Trending</h2>
+      <div class="game-grid">
+        <div class="game-card"></div>
+        <div class="game-card"></div>
+        <div class="game-card"></div>
+        <div class="game-card"></div>
+        <div class="game-card"></div>
+        <div class="game-card"></div>
       </div>
-      
-      <div class="input-group">
-        <input type="password" id="password" placeholder="Password" required>
-        <img src="./password-icon.svg" class="input-icon">
-      </div>
-      
-      <button type="submit" class="login-btn">Login</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
+    </section>
+  </main>
 </body>
 </html>
