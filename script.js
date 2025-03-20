@@ -4,6 +4,11 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   
-  // Here you would typically handle the login authentication
-  console.log('Login attempt:', { email, password });
+  // Store user in localStorage
+  const users = JSON.parse(localStorage.getItem('loggedInUsers') || '[]');
+  users.push({ email, loginTime: new Date().toISOString() });
+  localStorage.setItem('loggedInUsers', JSON.stringify(users));
+  
+  // Redirect to users page
+  window.location.href = 'users.html';
 });
