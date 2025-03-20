@@ -1,16 +1,34 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>GAMEX - Login</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-  Hello world
+  <div class="logo-container">
+    <img src="./logo.svg" alt="GAMEX" class="logo">
+    <p class="tagline">Discover Unbeatable Discounts on Your Favorite Video Games!</p>
+  </div>
+  
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email" required>
+        <img src="./email-icon.svg" class="input-icon">
+      </div>
+      
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required>
+        <img src="./password-icon.svg" class="input-icon">
+      </div>
+      
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
