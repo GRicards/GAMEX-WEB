@@ -55,7 +55,7 @@ body {
   padding: 0.5rem;
 }
 
-.review-btn, .login-btn {
+.review-btn, .login-btn, .users-btn {
   background: #666;
   color: white;
   border: none;
@@ -64,6 +64,10 @@ body {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+}
+
+.users-btn {
+  background: #444;
 }
 
 .login-btn {
