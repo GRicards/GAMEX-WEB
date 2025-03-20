@@ -55,13 +55,23 @@ body {
   padding: 0.5rem;
 }
 
-.review-btn {
+.review-btn, .login-btn {
   background: #666;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login-btn {
+  background: #000;
+}
+
+.login-btn:hover, .review-btn:hover {
+  opacity: 0.9;
 }
 
 .trending-section {
