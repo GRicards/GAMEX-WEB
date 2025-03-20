@@ -23,6 +23,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .review-card {
@@ -30,12 +33,24 @@
       padding: 20px;
       border-radius: 10px;
       color: black;
+      display: flex;
+      flex-direction: column;
     }
 
     .reviewer {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
+      order: 2;
+    }
+
+    .review-text {
+      order: 1;
+      margin-bottom: 15px;
+    }
+
+    .stars {
+      order: 3;
     }
 
     .avatar {
