@@ -7,6 +7,58 @@
   <title>GAMEX - Logged In Users</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
+    .review-section {
+      width: 80%;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    .review-title {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .reviews-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .review-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      color: black;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .stars {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .review-text {
+      margin: 0;
+      line-height: 1.4;
+    }
+
     .users-container {
       background: rgba(51, 51, 51, 0.8);
       padding: 40px;
@@ -37,6 +89,47 @@
   <div class="users-container">
     <h2>Logged In Users</h2>
     <ul id="userList" class="user-list"></ul>
+  </div>
+
+  <div class="review-section">
+    <h2 class="review-title">Review</h2>
+    <div class="reviews-container">
+      <div class="review-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/40?img=1" alt="Michael" class="avatar">
+          <span class="name">Michael Souris</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">This website has really good pricing. And a lot of trending and cool upcoming games</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/40?img=2" alt="Dewey" class="avatar">
+          <span class="name">Dewey Bennett</span>
+        </div>
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">This website has a lot of good discounts and very good games.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/40?img=3" alt="Meagan" class="avatar">
+          <span class="name">Meagan Rodgers</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">GAMEX always offers the best prices on games — often much cheaper than other platforms. I've saved so much money buying here! The game keys are delivered instantly, and I've never had any issues activating them.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/40?img=4" alt="Reyna" class="avatar">
+          <span class="name">Reyna Weber</span>
+        </div>
+        <div class="stars">★★★☆☆</div>
+        <p class="review-text">Needs more games in stock</p>
+      </div>
+    </div>
   </div>
   <script src="users.js"></script>
 </body>
