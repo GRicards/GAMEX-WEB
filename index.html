@@ -86,5 +86,135 @@
       </div>
     </section>
   </main>
+
+  <!-- Game Modal -->
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="" class="modal-image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalDescription"></p>
+      <button onclick="addToBasket()" class="add-to-basket-btn">Add to Basket</button>
+    </div>
+  </div>
+
+  <!-- Basket Modal -->
+  <div id="basketModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBasket()">&times;</span>
+      <h2>Your Basket</h2>
+      <div id="basketItems"></div>
+      <div class="basket-total">
+        <h3>Total: <span id="basketTotal">€0.00</span></h3>
+        <button onclick="checkout()" class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let basket = [];
+    let currentGame = null;
+
+    function showGameDetails(card) {
+      const modal = document.getElementById('gameModal');
+      const img = card.querySelector('.game-image');
+      const title = card.querySelector('.game-title');
+      const price = card.querySelector('.game-price');
+      
+      currentGame = {
+        image: img.src,
+        title: title.textContent,
+        price: price.textContent,
+        description: "Experience this amazing game with stunning graphics and engaging gameplay!"
+      };
+
+      document.getElementById('modalImage').src = currentGame.image;
+      document.getElementById('modalTitle').textContent = currentGame.title;
+      document.getElementById('modalPrice').textContent = currentGame.price;
+      document.getElementById('modalDescription').textContent = currentGame.description;
+      
+      modal.style.display = "block";
+    }
+
+    function addToBasket() {
+      if (currentGame) {
+        basket.push(currentGame);
+        updateBasketCount();
+        document.getElementById('gameModal').style.display = "none";
+      }
+    }
+
+    function updateBasketCount() {
+      const basketCountElement = document.querySelector('.basket-count');
+      if (!basketCountElement) {
+        const basketBtn = document.querySelector('.search-btn').parentNode;
+        const basketButton = document.createElement('button');
+        basketButton.className = 'basket-btn';
+        basketButton.onclick = openBasket;
+        basketButton.innerHTML = `
+          <span class="basket-count">${basket.length}</span>
+          🛒
+        `;
+        basketBtn.insertBefore(basketButton, basketBtn.firstChild);
+      } else {
+        basketCountElement.textContent = basket.length;
+      }
+    }
+
+    function openBasket() {
+      const basketItems = document.getElementById('basketItems');
+      basketItems.innerHTML = '';
+      let total = 0;
+
+      basket.forEach((item, index) => {
+        const price = parseFloat(item.price.replace('€', ''));
+        total += price;
+        
+        basketItems.innerHTML += `
+          <div class="basket-item">
+            <img src="${item.image}" alt="${item.title}">
+            <div class="basket-item-info">
+              <h3>${item.title}</h3>
+              <p>${item.price}</p>
+            </div>
+            <button onclick="removeFromBasket(${index})">Remove</button>
+          </div>
+        `;
+      });
+
+      document.getElementById('basketTotal').textContent = `€${total.toFixed(2)}`;
+      document.getElementById('basketModal').style.display = "block";
+    }
+
+    function removeFromBasket(index) {
+      basket.splice(index, 1);
+      updateBasketCount();
+      openBasket();
+    }
+
+    function closeBasket() {
+      document.getElementById('basketModal').style.display = "none";
+    }
+
+    function checkout() {
+      alert('Thank you for your purchase!');
+      basket = [];
+      updateBasketCount();
+      closeBasket();
+    }
+
+    // Add click event to game cards
+    document.querySelectorAll('.game-card').forEach(card => {
+      card.addEventListener('click', () => showGameDetails(card));
+    });
+
+    // Close modal when clicking (x)
+    document.querySelectorAll('.close').forEach(closeBtn => {
+      closeBtn.addEventListener('click', function() {
+        this.closest('.modal').style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>
