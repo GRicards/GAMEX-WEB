@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>GAMEX - Profile</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="GAMEX Logo - Original - 5000x5000 (2).png" alt="GAMEX" class="nav-logo">
+      <span class="nav-tagline">Discover Unbeatable Discounts on Your Favorite Video Games!</span>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="upcoming.html" class="nav-link">Upcoming</a>
+      <a href="store.html" class="nav-link">Store</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <div class="nav-right">
+      <button class="search-btn">
+        <img src="search-icon.svg" alt="Search">
+      </button>
+      <a href="users.html#reviews" class="review-btn">Review</a>
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </nav>
+
+  <div class="profile-container">
+    <h1>My Profile</h1>
+    <div class="profile-info">
+      <h2 id="profileName">Loading...</h2>
+      <p id="profileEmail">Loading...</p>
+    </div>
+    
+    <div class="purchased-games">
+      <h2>My Games</h2>
+      <div id="purchasedGamesList" class="games-grid">
+        <!-- Games will be populated here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
