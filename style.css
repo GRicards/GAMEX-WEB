@@ -91,9 +91,50 @@ body {
 }
 
 .game-card {
+  background: rgba(51, 51, 51, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-image {
+  width: 100%;
   aspect-ratio: 16/9;
-  background: #666;
+  object-fit: cover;
   border-radius: 8px;
+}
+
+.game-info {
+  margin-top: 10px;
+  color: white;
+  position: relative;
+}
+
+.game-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.game-price {
+  color: #4CAF50;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.discount-badge {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 .logo-container {
