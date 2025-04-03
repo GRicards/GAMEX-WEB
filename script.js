@@ -41,9 +41,4 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   
   // Show success notification
   showNotification('Successfully signed in!', 'success');
-  
-  // Redirect to users page after short delay
-  setTimeout(() => {
-    window.location.href = 'users.html';
-  }, 1500);
 });
