@@ -24,16 +24,12 @@ body {
 }
 
 .nav-logo {
-  height: 180px;
+  width: 200px;
+  height: auto;
   background: url('GAMEX Logo - Original - 5000x5000 (2).png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.nav-tagline {
-  font-size: 14px;
-  color: #cccccc;
 }
 
 .nav-center {
