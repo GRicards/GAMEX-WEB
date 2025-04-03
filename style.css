@@ -24,7 +24,7 @@ body {
 }
 
 .nav-logo {
-  height: 380px;
+  height: 180px;
   background: url('GAMEX Logo - Original - 5000x5000 (2).png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -255,7 +255,7 @@ body {
 }
 
 .logo {
-  width: 500px;
+  width: 300px;
   height: auto;
 }
 
