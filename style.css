@@ -159,6 +159,11 @@ body {
   padding: 0.5rem;
 }
 
+.search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
 .review-btn, .login-btn, .users-btn {
   background: #666;
   color: white;
