@@ -103,12 +103,9 @@
       <a href="about.html" class="nav-link">About</a>
     </div>
     <div class="nav-right">
-      <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Search games..." style="display: none;">
-        <button class="search-btn" onclick="toggleSearch()">
-          <img src="search.png" alt="Search">
-        </button>
-      </div>
+      <button class="search-btn">
+        <img src="search.png" alt="Search">
+      </button>
       <button class="basket-btn" onclick="openBasket()">
         <span class="basket-count">0</span>
         🛒
@@ -300,31 +297,7 @@
 
 
 <script>
-function toggleSearch() {
-  const searchInput = document.getElementById('searchInput');
-  searchInput.style.display = searchInput.style.display === 'none' ? 'block' : 'none';
-  if (searchInput.style.display === 'block') {
-    searchInput.focus();
-  }
-}
-
-function searchGames(query) {
-  const gameCards = document.querySelectorAll('.game-card');
-  query = query.toLowerCase();
-  
-  gameCards.forEach(card => {
-    const title = card.querySelector('.game-title').textContent.toLowerCase();
-    if (title.includes(query)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('searchInput');
-  searchInput.addEventListener('input', (e) => searchGames(e.target.value));
   const categoryItems = document.querySelectorAll('.category-list li');
   const gameCards = document.querySelectorAll('.game-card');
 
