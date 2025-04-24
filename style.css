@@ -1,9 +1,10 @@
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: rgb(161, 160, 169);
-  background: linear-gradient(0deg, rgba(161, 160, 169, 1) 0%, rgba(61, 61, 64, 1) 100%);
+  background: rgb(161,160,169);
+  background: linear-gradient(0deg, rgba(161,160,169,1) 0%, rgba(61,61,64,1) 100%);
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -109,8 +110,7 @@ body {
   margin-bottom: 20px;
 }
 
-.add-to-basket-btn,
-.checkout-btn {
+.add-to-basket-btn, .checkout-btn {
   background: #4CAF50;
   color: white;
   border: none;
@@ -152,8 +152,7 @@ body {
   border-top: 1px solid #666;
 }
 
-.search-btn,
-.profile-btn {
+.search-btn, .profile-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -165,9 +164,7 @@ body {
   height: 20px;
 }
 
-.review-btn,
-.login-btn,
-.users-btn {
+.review-btn, .login-btn, .users-btn {
   background: #666;
   color: white;
   border: none;
@@ -186,8 +183,7 @@ body {
   background: #000;
 }
 
-.login-btn:hover,
-.review-btn:hover {
+.login-btn:hover, .review-btn:hover {
   opacity: 0.9;
 }
 
